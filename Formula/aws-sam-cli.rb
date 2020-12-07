@@ -8,17 +8,15 @@ class AwsSamCli < Formula
 
   desc "AWS SAM CLI 🐿 is a tool for local development and testing of Serverless applications"
   homepage "https://github.com/awslabs/aws-sam-cli/"
-  url config_provider.url()
-  sha256 config_provider.sha256
-  head "https://github.com/awslabs/aws-sam-cli.git", :tag => "v1.12.0",
+  # url config_provider.url()
+  head "https://github.com/awslabs/aws-sam-cli.git", :tag => "v1.12.0"
 
   conflicts_with 'aws-sam-cli-rc', :because => "both install the 'sam' binary"
 
   bottle do
     root_url config_provider.root_url()
     cellar :any_skip_relocation
-    sha256 config_provider.sierra_hash() => :sierra
-    sha256 config_provider.linux_hash() => :x86_64_linux
+    # sha256 config_provider.sierra_hash() => :sierra
   end
 
   depends_on "python@3.8"
