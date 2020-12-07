@@ -10,7 +10,7 @@ class AwsSamCli < Formula
   homepage "https://github.com/awslabs/aws-sam-cli/"
   url config_provider.url()
   sha256 config_provider.sha256
-  head "https://github.com/awslabs/aws-sam-cli.git", :branch => "develop"
+  head "https://github.com/awslabs/aws-sam-cli.git", :tag => "v1.12.0",
 
   conflicts_with 'aws-sam-cli-rc', :because => "both install the 'sam' binary"
 
